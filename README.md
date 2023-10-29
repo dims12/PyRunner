@@ -1,4 +1,4 @@
-# PyRunner
+# [Normal]PyRunner
 
 PyRunner allows you to run shell commands from Python in a way similar to how it is happening inside shell scripts
 
