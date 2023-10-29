@@ -38,7 +38,7 @@ def exec(command: str, sudo: bool = False, out_lines: list = None, err_lines: li
 
     def capture(text, file, mute, chars: list):
         if not mute:
-            print(text, end='', file=file)
+            print(text, end='', file=file, flush=True)
         chars.append(text)
 
     out_chars = []
@@ -48,7 +48,7 @@ def exec(command: str, sudo: bool = False, out_lines: list = None, err_lines: li
 
     if sudo:
 
-        print(f"$ sudo {command}")
+        print(f"$ sudo {command}", flush=True)
 
         ask_password_if_required()
 
@@ -59,7 +59,7 @@ def exec(command: str, sudo: bool = False, out_lines: list = None, err_lines: li
                                    bufsize=0)
     else:
 
-        print(f"$ '{command}'")
+        print(f"$ '{command}'", flush=True)
 
         process = subprocess.Popen(command, shell=True,
                                    stdin=subprocess.PIPE,
