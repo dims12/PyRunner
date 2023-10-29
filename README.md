@@ -109,8 +109,6 @@ Note password is not asked.
 Password is stored in Python variable. It is okay with standalone scripts, but can be not okay with interactive shells 
 like Jupyter. `sudoers` check is not supported yet.
 
-# Collecting values
-
 
 
 
